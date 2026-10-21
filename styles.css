@@ -55,11 +55,9 @@ a:focus-visible, button:focus-visible {
   font-size: 1.125rem;
 }
 .brand-mark {
-  font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  font-weight: 700;
-  color: var(--signal);
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  display: block;
+  width: 34px;
+  height: auto;
 }
 .lang {
   color: var(--muted);
