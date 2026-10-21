@@ -1,0 +1,166 @@
+:root {
+  --graphite: #0D1117;
+  --slate: #161B22;
+  --line: #30363D;
+  --fog: #C9D1D9;
+  --muted: #8B949E;
+  --paper: #F0F6FC;
+  --signal: #3FB950;
+  --measure: 42rem;
+  --gutter: clamp(16px, 5vw, 48px);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--graphite);
+  color: var(--fog);
+  font-family: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+a { color: var(--signal); text-underline-offset: 0.18em; }
+a:hover { color: var(--paper); }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.brand-mark {
+  font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-weight: 700;
+  color: var(--signal);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.lang {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.lang a { color: var(--fog); }
+.lang [aria-current="true"] { color: var(--paper); font-weight: 700; text-decoration: none; }
+
+/* Hero */
+.hero { padding: 2.5rem 0 3.5rem; }
+.hero h1 {
+  color: var(--paper);
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  max-width: 16ch;
+}
+.hero .lede {
+  font-size: 1.25rem;
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* The table: a message shown to the person across */
+.table {
+  margin: 2.75rem 0 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--slate);
+  overflow: hidden;
+}
+.table .say {
+  margin: 0;
+  padding: 1.6rem 1.5rem;
+  color: var(--paper);
+  font-size: clamp(1.6rem, 5.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.table .say.across {
+  transform: rotate(180deg);
+  color: var(--signal);
+}
+.table .say + .say { border-top: 1px dashed var(--line); }
+.table figcaption {
+  border-top: 1px solid var(--line);
+  padding: 0.85rem 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Sections */
+section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+h2 {
+  color: var(--paper);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 1.25rem;
+}
+h3 {
+  color: var(--paper);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.app-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.status { color: var(--signal); font-weight: 700; font-size: 1rem; }
+
+ul.features { padding-left: 1.2rem; margin: 1rem 0; }
+ul.features li { margin: 0.35rem 0; }
+
+/* Document pages */
+.doc { padding: 1rem 0 3rem; }
+.doc h1 {
+  color: var(--paper);
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  margin: 1rem 0 0.5rem;
+}
+.doc .updated { color: var(--muted); margin: 0 0 2rem; }
+.doc h2 { font-size: 1.3rem; margin: 2.25rem 0 0.6rem; }
+.doc p, .doc li { max-width: var(--measure); }
+.summary {
+  border-left: 3px solid var(--signal);
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  color: var(--paper);
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
