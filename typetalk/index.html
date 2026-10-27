@@ -167,6 +167,73 @@
         <p><a href="https://www.youtube.com/watch?v=2Ge_FA5EPWU">▶ Pogledajte kako TypeTalk radi</a> (video na YouTubeu, verzija 1.3)</p>
       </section>
 
+      <section aria-labelledby="oba-smjera">
+        <h2 id="oba-smjera">Razgovor u oba smjera</h2>
+        <p>TypeTalk možete otvoriti na podijeljenom zaslonu, zajedno s aplikacijom za prepoznavanje govora. Vi pišete u TypeTalku, a ono što sugovornik kaže vidite kao tekst u drugoj aplikaciji, na istom ekranu.</p>
+        <figure class="scene" id="scene-both">
+          <svg viewBox="0 0 360 460" role="img" aria-labelledby="sceneBothDesc">
+            <desc id="sceneBothDesc">Pogled odozgo na šalter pošte. Na mobitelu je podijeljeni zaslon. Gost u TypeTalku upiše „Dobar dan, podižem paket”, a tekst je okrenut prema osobi na šalteru. Ona odgovori glasom, a gornja aplikacija pokaže gostu tekst „Može osobna iskaznica, molim?”. Gost pruži osobnu iskaznicu i dobije paket.</desc>
+            <ellipse cx="180" cy="38" rx="80" ry="30" fill="#4A5361"/>
+            <circle data-k="head" cx="180" cy="52" r="24" fill="#6B7584"/>
+            <text x="80" y="34" fill="#8B949E" font-size="12" text-anchor="middle">šalter</text>
+            <g data-k="waves" fill="none" stroke="#C9D1D9" stroke-width="2.5" stroke-linecap="round" opacity="1">
+              <path d="M 212 44 A 10 10 0 0 1 212 60" opacity="0"/>
+              <path d="M 219 38 A 18 18 0 0 1 219 66" opacity="0"/>
+              <path d="M 226 32 A 26 26 0 0 1 226 72" opacity="0"/>
+            </g>
+            <rect x="16" y="84" width="328" height="296" rx="10" fill="#1C232C" stroke="#30363D" stroke-width="2"/>
+            <rect x="16" y="84" width="244" height="9" rx="3" fill="#6FA8D6" opacity="0.35"/>
+            <rect x="320" y="84" width="24" height="9" rx="3" fill="#6FA8D6" opacity="0.35"/>
+            <rect x="105" y="104" width="150" height="268" rx="18" fill="#0D1117" stroke="#484F58" stroke-width="3"/>
+            <rect x="114" y="114" width="132" height="96" rx="8" fill="#F0F6FC"/>
+            <rect x="121" y="121" width="5" height="8" rx="2.5" fill="#57606A"/>
+            <path d="M 119.5 127 a 4 4 0 0 0 8 0 M 123.5 131 v 2" fill="none" stroke="#57606A" stroke-width="1.2" stroke-linecap="round"/>
+            <text x="132" y="130" fill="#57606A" font-size="7.5" font-weight="700">Prepoznavanje govora</text>
+            <circle data-k="listen" cx="238" cy="127" r="3.5" fill="#3FB950" opacity="0"/>
+            <g data-k="heard" fill="#0D1117" font-size="13" font-weight="700">
+              <text x="122" y="152">Može osobna</text>
+              <text x="122" y="170">iskaznica,</text>
+              <text x="122" y="188">molim?</text>
+            </g>
+            <rect x="160" y="213" width="40" height="5" rx="2.5" fill="#6E7681"/>
+            <rect x="114" y="222" width="132" height="96" rx="8" fill="#1B6FA8"/>
+            <g data-k="say" transform="rotate(180 180 270)" fill="#FFFFFF" font-size="15" font-weight="700" text-anchor="middle">
+              <text x="180" y="256">Dobar dan,</text>
+              <text x="180" y="274">podižem</text>
+              <text x="180" y="292">paket.</text>
+            </g>
+            <circle cx="125" cy="307" r="6" fill="rgba(255,255,255,0.28)"/>
+            <path d="M 122 305.8 a 3.4 3.4 0 0 1 6 0 M 128 308.2 a 3.4 3.4 0 0 1 -6 0" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+            <rect x="114" y="324" width="132" height="38" rx="8" fill="#21262D" stroke="#30363D"/>
+            <text data-k="input" x="120" y="347" fill="#F0F6FC" font-size="9">Dobar dan, podižem paket.</text>
+            <rect data-k="cursor" x="122" y="338" width="1.4" height="12" fill="#3FB950" opacity="0"/>
+            <g data-k="card" opacity="0">
+              <rect x="270" y="318" width="40" height="26" rx="4" fill="#C9D1D9"/>
+              <rect x="274" y="322" width="11" height="14" rx="2" fill="#6B7584"/>
+              <rect x="289" y="324" width="17" height="3" rx="1.5" fill="#6B7584"/>
+              <rect x="289" y="330" width="12" height="3" rx="1.5" fill="#6B7584"/>
+            </g>
+            <g data-k="box">
+              <rect x="268" y="300" width="44" height="40" rx="4" fill="#B08A5A"/>
+              <rect x="286" y="300" width="8" height="40" fill="#D9BE8F"/>
+              <rect x="268" y="316" width="44" height="6" fill="#9A774B"/>
+            </g>
+            <ellipse cx="180" cy="426" rx="80" ry="30" fill="#2D5878"/>
+            <circle cx="180" cy="410" r="24" fill="#3C7099"/>
+            <text x="282" y="438" fill="#8B949E" font-size="12" text-anchor="middle">vi</text>
+          </svg>
+          <figcaption class="scene-foot">
+            <ol class="steps" data-k="steps">
+              <li>Napišete poruku i osoba na šalteru je pročita.</li>
+              <li>Ona odgovori glasom, a aplikacija za prepoznavanje govora pokaže vam tekst.</li>
+              <li>Razgovor ide u oba smjera, na jednom ekranu.</li>
+            </ol>
+            <button class="pause" data-k="pause" type="button" aria-pressed="false" data-pause="Zaustavi animaciju" data-play="Pokreni animaciju" hidden>Zaustavi animaciju</button>
+          </figcaption>
+        </figure>
+        <p class="scene-note">TypeTalk sam i dalje ne koristi mikrofon ni internet. Govor prepoznaje druga aplikacija, prema svojim pravilima privatnosti.</p>
+      </section>
+
       <section aria-labelledby="dolazi">
         <h2 id="dolazi">Što dolazi</h2>
         <ol class="roadmap">
@@ -195,6 +262,7 @@
     <div class="wrap">© 2026 Shoxi Labs · Posjete se broje bez kolačića (Cloudflare Web Analytics)</div>
   </footer>
   <script src="/scene.js" defer></script>
+  <script src="/scene-both.js" defer></script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "94a921f4c98a4f0ab8cf91ca3a76f69c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

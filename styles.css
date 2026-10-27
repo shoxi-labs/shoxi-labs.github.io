@@ -332,3 +332,4 @@ button.pause:hover { border-color: var(--paper); }
 @keyframes nod { 0%, 100% { transform: translateY(0); } 25%, 75% { transform: translateY(6px); } 50% { transform: translateY(0); } }
 .scene #cursor { animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
+.scene-note { color: var(--muted); font-size: 1rem; margin: 1rem 0 0; max-width: var(--measure); }
