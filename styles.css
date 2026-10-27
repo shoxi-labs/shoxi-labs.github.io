@@ -83,31 +83,30 @@ a:focus-visible, button:focus-visible {
   margin: 0;
 }
 
-/* The table: a message shown to the person across */
+/* The table: a message shown to the person across (looks like the TypeTalk display) */
 .table {
   margin: 2.75rem 0 0;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--slate);
+  border-radius: 18px;
+  background: #1B6FA8;
+  box-shadow: 0 0 0 6px #0F3D5C;
   overflow: hidden;
 }
 .table .say {
   margin: 0;
   padding: 1.6rem 1.5rem;
-  color: var(--paper);
+  color: #FFFFFF;
   font-size: clamp(1.6rem, 5.2vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
 }
 .table .say.across {
   transform: rotate(180deg);
-  color: var(--signal);
 }
-.table .say + .say { border-top: 1px dashed var(--line); }
+.table .say + .say { border-top: 2px solid rgba(255, 255, 255, 0.4); }
 .table figcaption {
-  border-top: 1px solid var(--line);
+  background: #0F3D5C;
   padding: 0.85rem 1.5rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
 }
 
