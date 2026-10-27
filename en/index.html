@@ -46,9 +46,11 @@
           <span class="status">Coming soon to Google Play</span>
         </div>
         <p>Type a message and show it to the other person in large letters, face to face. For deaf and hard of hearing people, and for anyone who finds it easier to write than to speak or listen.</p>
-        <figure class="table flip-in">
-          <p class="say across" aria-hidden="true">Hello! I can't hear, could you write it down?</p>
-          <p class="say">Hello! I can't hear, could you write it down?</p>
+        <figure class="phone flip-in">
+          <div class="device">
+            <div class="display" aria-hidden="true"><p>Hello! I can't hear, could you write it down?</p><span class="flip-btn"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M4.5 6.5a4 4 0 0 1 7 0M11.5 9.5a4 4 0 0 1-7 0" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span></div>
+            <p class="field">Hello! I can't hear, could you write it down?</p>
+          </div>
           <figcaption>In TypeTalk, the same message can be flipped to face the person across the table.</figcaption>
         </figure>
         <ul class="facts">
@@ -77,7 +79,7 @@
   </footer>
   <script>
     (() => {
-      const card = document.querySelector(".table.flip-in");
+      const card = document.querySelector(".phone.flip-in");
       if (!card || !("IntersectionObserver" in window)) return;
       card.classList.add("wait");
       const io = new IntersectionObserver(es => {

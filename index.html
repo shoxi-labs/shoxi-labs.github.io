@@ -46,9 +46,11 @@
           <span class="status">Uskoro na Google Playu</span>
         </div>
         <p>Napišite poruku i pokažite je sugovorniku velikim slovima, licem u lice. Za gluhe i nagluhe osobe, i za svakoga kome je lakše pisati nego govoriti ili slušati.</p>
-        <figure class="table flip-in">
-          <p class="say across" aria-hidden="true">Dobar dan! Ne čujem, možete li mi napisati?</p>
-          <p class="say">Dobar dan! Ne čujem, možete li mi napisati?</p>
+        <figure class="phone flip-in">
+          <div class="device">
+            <div class="display" aria-hidden="true"><p>Dobar dan! Ne čujem, možete li mi napisati?</p><span class="flip-btn"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M4.5 6.5a4 4 0 0 1 7 0M11.5 9.5a4 4 0 0 1-7 0" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span></div>
+            <p class="field">Dobar dan! Ne čujem, možete li mi napisati?</p>
+          </div>
           <figcaption>U TypeTalku se ista poruka može okrenuti prema osobi preko puta stola.</figcaption>
         </figure>
         <ul class="facts">
@@ -77,7 +79,7 @@
   </footer>
   <script>
     (() => {
-      const card = document.querySelector(".table.flip-in");
+      const card = document.querySelector(".phone.flip-in");
       if (!card || !("IntersectionObserver" in window)) return;
       card.classList.add("wait");
       const io = new IntersectionObserver(es => {
