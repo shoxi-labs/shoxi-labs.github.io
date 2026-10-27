@@ -246,8 +246,9 @@ ul.facts li {
 .group:first-of-type h3 { margin-top: 0; }
 .more { font-weight: 700; }
 
-/* Home: the message turns to face the person across, once, when the card comes into view (.seen is set by a small script) */
+/* Home: the message turns to face the person across, once, when the card comes into view (.wait and .seen are set by a small script; without it the message is simply turned) */
 @media (prefers-reduced-motion: no-preference) {
+  .table.flip-in.wait .say.across { transform: none; }
   .table.flip-in.seen .say.across { animation: flip-in 1.6s linear .4s both; }
 }
 /* shrinks while turning, so the corners stay inside the card */

@@ -79,8 +79,9 @@
     (() => {
       const card = document.querySelector(".table.flip-in");
       if (!card || !("IntersectionObserver" in window)) return;
+      card.classList.add("wait");
       const io = new IntersectionObserver(es => {
-        if (es.some(e => e.isIntersecting)) { card.classList.add("seen"); io.disconnect(); }
+        if (es.some(e => e.isIntersecting)) { card.classList.replace("wait", "seen"); io.disconnect(); }
       }, { threshold: 0.6 });
       io.observe(card);
     })();
