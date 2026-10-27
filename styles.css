@@ -354,3 +354,5 @@ button.pause:hover { border-color: var(--paper); }
 .scene #cursor { animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .scene-note { color: var(--muted); font-size: 1rem; margin: 1rem 0 0; max-width: var(--measure); }
+.how-title { margin: 1.75rem 0 0.5rem; }
+ol.how { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.35rem; max-width: var(--measure); }
