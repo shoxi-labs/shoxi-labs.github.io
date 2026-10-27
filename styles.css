@@ -244,3 +244,89 @@ ul.facts li {
 .group h3 { margin: 1.5rem 0 0.25rem; }
 .group:first-of-type h3 { margin-top: 0; }
 .more { font-weight: 700; }
+
+/* Home: the message turns to face the person across, once, when the page opens */
+@media (prefers-reduced-motion: no-preference) {
+  .table.flip-in .say.across { animation: flip-in 1.6s linear .8s both; }
+}
+/* shrinks while turning, so the corners stay inside the card */
+@keyframes flip-in {
+  0% { transform: rotate(0deg) scale(1); }
+  8% { transform: rotate(15deg) scale(.8); }
+  17% { transform: rotate(30deg) scale(.55); }
+  25% { transform: rotate(45deg) scale(.42); }
+  33% { transform: rotate(60deg) scale(.34); }
+  50% { transform: rotate(90deg) scale(.3); }
+  67% { transform: rotate(120deg) scale(.34); }
+  75% { transform: rotate(135deg) scale(.42); }
+  83% { transform: rotate(150deg) scale(.55); }
+  92% { transform: rotate(165deg) scale(.8); }
+  100% { transform: rotate(180deg) scale(1); }
+}
+
+/* TypeTalk page: café scene (scene.js) */
+figure.scene {
+  margin: 1.5rem 0 0;
+  max-width: 26rem;
+  border-radius: 18px;
+  background: var(--slate);
+  box-shadow: 0 0 0 1px var(--line);
+  overflow: hidden;
+}
+figure.scene svg { display: block; width: 100%; height: auto; }
+.scene-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem 1.25rem;
+  background: #0F3D5C;
+}
+ol.steps {
+  list-style: none;
+  counter-reset: s;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+ol.steps li { counter-increment: s; display: flex; gap: 0.6rem; color: var(--paper); transition: color .3s, opacity .3s; }
+ol.steps li::before {
+  content: counter(s);
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.playing ol.steps li { opacity: .55; }
+.playing ol.steps li.active { opacity: 1; color: var(--signal); }
+button.pause {
+  align-self: flex-start;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--paper);
+  background: transparent;
+  border: 2px solid rgba(240, 246, 252, 0.5);
+  border-radius: 999px;
+  padding: 0.25rem 0.9rem;
+  cursor: pointer;
+}
+button.pause:hover { border-color: var(--paper); }
+.scene #say { transform-box: view-box; transform-origin: 180px 206px; }
+.scene #arrows { transition: opacity .4s; }
+.scene #cup { transition: transform .9s cubic-bezier(.2, .8, .2, 1), opacity .4s; }
+.scene #ok { transform-box: fill-box; transform-origin: center; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1), opacity .25s; }
+.scene #ripple { transform-box: fill-box; transform-origin: center; opacity: 0; }
+.scene #ripple.tap { animation: tap .6s ease-out; }
+@keyframes tap { from { transform: scale(1); opacity: .9; } to { transform: scale(3); opacity: 0; } }
+.scene #themHead.nod { animation: nod .9s ease-in-out; }
+@keyframes nod { 0%, 100% { transform: translateY(0); } 25%, 75% { transform: translateY(6px); } 50% { transform: translateY(0); } }
+.scene #cursor { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
