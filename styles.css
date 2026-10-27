@@ -85,7 +85,8 @@ a:focus-visible, button:focus-visible {
 
 /* The table: a message shown to the person across (looks like the TypeTalk display) */
 .table {
-  margin: 2.75rem 0 0;
+  margin: 1.5rem 0 0;
+  max-width: 26rem;
   border-radius: 18px;
   background: #1B6FA8;
   box-shadow: 0 0 0 6px #0F3D5C;
@@ -93,9 +94,9 @@ a:focus-visible, button:focus-visible {
 }
 .table .say {
   margin: 0;
-  padding: 1.6rem 1.5rem;
+  padding: 1.1rem 1.25rem;
   color: #FFFFFF;
-  font-size: clamp(1.6rem, 5.2vw, 2.5rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.6rem);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -105,7 +106,7 @@ a:focus-visible, button:focus-visible {
 .table .say + .say { border-top: 2px solid rgba(255, 255, 255, 0.4); }
 .table figcaption {
   background: #0F3D5C;
-  padding: 0.85rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
 }
@@ -245,9 +246,10 @@ ul.facts li {
 .group:first-of-type h3 { margin-top: 0; }
 .more { font-weight: 700; }
 
-/* Home: the message turns to face the person across, once, when the page opens */
+/* Home: the message turns to face the person across, once, when the card comes into view (.wait and .seen are set by a small script; without it the message is simply turned) */
 @media (prefers-reduced-motion: no-preference) {
-  .table.flip-in .say.across { animation: flip-in 1.6s linear .8s both; }
+  .table.flip-in.wait .say.across { transform: none; }
+  .table.flip-in.seen .say.across { animation: flip-in 1.6s linear .4s both; }
 }
 /* shrinks while turning, so the corners stay inside the card */
 @keyframes flip-in {

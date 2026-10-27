@@ -37,12 +37,6 @@
       <div class="hero">
         <h1>Aplikacije koje olakšavaju svakodnevicu.</h1>
         <p class="lede">Shoxi Labs izrađuje mobilne aplikacije za stvarne, svakodnevne potrebe. Prva je TypeTalk, koja gluhim i nagluhim osobama olakšava razgovor licem u lice.</p>
-
-        <figure class="table flip-in">
-          <p class="say across" aria-hidden="true">Dobar dan! Ne čujem, možete li mi napisati?</p>
-          <p class="say">Dobar dan! Ne čujem, možete li mi napisati?</p>
-          <figcaption>U TypeTalku se ista poruka može okrenuti prema osobi preko puta stola.</figcaption>
-        </figure>
       </div>
 
       <section aria-labelledby="aplikacije">
@@ -52,6 +46,11 @@
           <span class="status">Uskoro na Google Playu</span>
         </div>
         <p>Napišite poruku i pokažite je sugovorniku velikim slovima, licem u lice. Za gluhe i nagluhe osobe, i za svakoga kome je lakše pisati nego govoriti ili slušati.</p>
+        <figure class="table flip-in">
+          <p class="say across" aria-hidden="true">Dobar dan! Ne čujem, možete li mi napisati?</p>
+          <p class="say">Dobar dan! Ne čujem, možete li mi napisati?</p>
+          <figcaption>U TypeTalku se ista poruka može okrenuti prema osobi preko puta stola.</figcaption>
+        </figure>
         <ul class="facts">
           <li>Besplatno</li>
           <li>Bez oglasa</li>
@@ -76,6 +75,17 @@
   <footer class="site-footer">
     <div class="wrap">© 2026 Shoxi Labs · Posjete se broje bez kolačića (Cloudflare Web Analytics)</div>
   </footer>
+  <script>
+    (() => {
+      const card = document.querySelector(".table.flip-in");
+      if (!card || !("IntersectionObserver" in window)) return;
+      card.classList.add("wait");
+      const io = new IntersectionObserver(es => {
+        if (es.some(e => e.isIntersecting)) { card.classList.replace("wait", "seen"); io.disconnect(); }
+      }, { threshold: 0.6 });
+      io.observe(card);
+    })();
+  </script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "94a921f4c98a4f0ab8cf91ca3a76f69c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
