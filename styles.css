@@ -215,3 +215,33 @@ ol.roadmap li.goal .rm-tag { background: var(--paper); color: var(--graphite); b
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/* App page (TypeTalk) */
+.eyebrow {
+  color: var(--signal);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+ul.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+ul.facts li {
+  border: 1px solid var(--line);
+  background: var(--slate);
+  border-radius: 999px;
+  padding: 0.15rem 0.85rem;
+  color: var(--paper);
+  font-size: 1rem;
+}
+.status-line { margin: 1.25rem 0 0; max-width: 52ch; }
+.group h3 { margin: 1.5rem 0 0.25rem; }
+.group:first-of-type h3 { margin-top: 0; }
+.more { font-weight: 700; }
