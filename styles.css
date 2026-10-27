@@ -83,33 +83,67 @@ a:focus-visible, button:focus-visible {
   margin: 0;
 }
 
-/* The table: a message shown to the person across (looks like the TypeTalk display) */
-.table {
+/* Home: TypeTalk on an upright phone. The message on the blue display faces the person across, the field below is yours */
+.phone {
   margin: 1.5rem 0 0;
-  max-width: 26rem;
-  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+.device {
+  width: min(14rem, 100%);
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.7rem;
+  background: var(--graphite);
+  border: 3px solid #484F58;
+  border-radius: 1.75rem;
+  box-shadow: 0 0 0 6px var(--slate);
+}
+.device .display {
+  position: relative;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
   background: #1B6FA8;
-  box-shadow: 0 0 0 6px #0F3D5C;
+  border-radius: 1rem;
   overflow: hidden;
 }
-.table .say {
+.device .display p {
   margin: 0;
-  padding: 1.1rem 1.25rem;
   color: #FFFFFF;
-  font-size: clamp(1.2rem, 4.2vw, 1.6rem);
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.2;
-}
-.table .say.across {
+  text-align: center;
   transform: rotate(180deg);
 }
-.table .say + .say { border-top: 2px solid rgba(255, 255, 255, 0.4); }
-.table figcaption {
-  background: #0F3D5C;
-  padding: 0.75rem 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
+.flip-btn {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
 }
+.device .field {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: #21262D;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  color: var(--paper);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+.phone figcaption { color: var(--muted); font-size: 0.95rem; max-width: 34ch; }
 
 /* Sections */
 section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
@@ -246,25 +280,12 @@ ul.facts li {
 .group:first-of-type h3 { margin-top: 0; }
 .more { font-weight: 700; }
 
-/* Home: the message turns to face the person across, once, when the card comes into view (.wait and .seen are set by a small script; without it the message is simply turned) */
+/* Home: the message turns to face the person across, once, when the phone comes into view (.wait and .seen are set by a small script; without it the message is simply turned) */
 @media (prefers-reduced-motion: no-preference) {
-  .table.flip-in.wait .say.across { transform: none; }
-  .table.flip-in.seen .say.across { animation: flip-in 1.6s linear .4s both; }
+  .phone.flip-in.wait .display p { transform: none; }
+  .phone.flip-in.seen .display p { animation: turn-in 1.4s cubic-bezier(.65, 0, .35, 1) .4s both; }
 }
-/* shrinks while turning, so the corners stay inside the card */
-@keyframes flip-in {
-  0% { transform: rotate(0deg) scale(1); }
-  8% { transform: rotate(15deg) scale(.8); }
-  17% { transform: rotate(30deg) scale(.55); }
-  25% { transform: rotate(45deg) scale(.42); }
-  33% { transform: rotate(60deg) scale(.34); }
-  50% { transform: rotate(90deg) scale(.3); }
-  67% { transform: rotate(120deg) scale(.34); }
-  75% { transform: rotate(135deg) scale(.42); }
-  83% { transform: rotate(150deg) scale(.55); }
-  92% { transform: rotate(165deg) scale(.8); }
-  100% { transform: rotate(180deg) scale(1); }
-}
+@keyframes turn-in { from { transform: rotate(0deg); } to { transform: rotate(180deg); } }
 
 /* TypeTalk page: café scene (scene.js) */
 figure.scene {
@@ -332,3 +353,4 @@ button.pause:hover { border-color: var(--paper); }
 @keyframes nod { 0%, 100% { transform: translateY(0); } 25%, 75% { transform: translateY(6px); } 50% { transform: translateY(0); } }
 .scene #cursor { animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
+.scene-note { color: var(--muted); font-size: 1rem; margin: 1rem 0 0; max-width: var(--measure); }
