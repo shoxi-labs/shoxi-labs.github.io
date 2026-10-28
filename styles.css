@@ -346,8 +346,10 @@ button.pause:hover { border-color: var(--paper); }
 .scene #ripple { transform-box: fill-box; transform-origin: center; opacity: 0; }
 .scene #ripple.tap { animation: tap .6s ease-out; }
 @keyframes tap { from { transform: scale(1); opacity: .9; } to { transform: scale(3); opacity: 0; } }
+.scene #themHead { transform-box: fill-box; transform-origin: center; }
+/* kimanje odozgo: glava se malo spusti i smanji, ali ne prijeđe rub stola (y 80) */
 .scene #themHead.nod { animation: nod .9s ease-in-out; }
-@keyframes nod { 0%, 100% { transform: translateY(0); } 25%, 75% { transform: translateY(6px); } 50% { transform: translateY(0); } }
+@keyframes nod { 0%, 50%, 100% { transform: translateY(0) scale(1); } 25%, 75% { transform: translateY(2px) scale(.9); } }
 .scene #cursor { animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .scene-note { color: var(--muted); font-size: 1rem; margin: 1rem 0 0; max-width: var(--measure); }
