@@ -142,6 +142,7 @@ a:focus-visible, button:focus-visible {
   color: var(--paper);
   font-size: 0.85rem;
   line-height: 1.3;
+  min-height: calc(2.6em + 1.2rem + 2px); /* two lines, so the phone doesn't jump while typing */
 }
 .phone figcaption { color: var(--muted); font-size: 0.95rem; max-width: 34ch; }
 
@@ -280,12 +281,8 @@ ul.facts li {
 .group:first-of-type h3 { margin-top: 0; }
 .more { font-weight: 700; }
 
-/* Home: the message turns to face the person across, once, when the phone comes into view (.wait and .seen are set by a small script; without it the message is simply turned) */
-@media (prefers-reduced-motion: no-preference) {
-  .phone.flip-in.wait .display p { transform: none; }
-  .phone.flip-in.seen .display p { animation: turn-in 1.4s cubic-bezier(.65, 0, .35, 1) .4s both; }
-}
-@keyframes turn-in { from { transform: rotate(0deg); } to { transform: rotate(180deg); } }
+/* Home: the message loop is in phone.js; the button sits under the caption */
+.phone .pause { margin-top: -0.25rem; }
 
 /* TypeTalk page: café scene (scene.js) */
 figure.scene {
