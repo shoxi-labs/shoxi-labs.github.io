@@ -353,3 +353,28 @@ button.pause:hover { border-color: var(--paper); }
 .scene-note { color: var(--muted); font-size: 1rem; margin: 1rem 0 0; max-width: var(--measure); }
 .how-title { margin: 1.75rem 0 0.5rem; }
 ol.how { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.35rem; max-width: var(--measure); }
+
+/* FAQ */
+.faq-group { font-size: 1.15rem; margin: 1.75rem 0 0.75rem; }
+section > h2 + .faq-group { margin-top: 0; }
+.faq { display: grid; gap: 0.5rem; max-width: var(--measure); }
+.faq details { background: var(--slate); border: 1px solid var(--line); border-radius: 0.7rem; }
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  color: var(--paper);
+  font-weight: 700;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; margin-left: auto; color: var(--signal); font-size: 1.3rem; line-height: 1.1; }
+.faq details[open] summary::after { content: "–"; }
+.faq summary:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; border-radius: 0.7rem; }
+.faq-a { padding: 0 1rem 1rem; }
+.faq-a p { margin: 0 0 0.6rem; }
+.faq-a p:last-child { margin-bottom: 0; }
+.faq-steps { margin: 0 0 0.6rem; padding-left: 1.4rem; }
+.faq-steps li { margin: 0.25rem 0; }
