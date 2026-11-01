@@ -83,7 +83,7 @@ a:focus-visible, button:focus-visible {
   margin: 0;
 }
 
-/* Home: TypeTalk on an upright phone. The message on the blue display faces the person across, the field below is yours */
+/* Home: TihoFlip on an upright phone. The message on the blue display faces the person across, the field below is yours */
 .phone {
   margin: 1.5rem 0 0;
   display: flex;
@@ -251,7 +251,7 @@ ol.roadmap li.goal .rm-tag { background: var(--paper); color: var(--graphite); b
   font-size: 0.95rem;
 }
 
-/* App page (TypeTalk) */
+/* App page (TihoFlip) */
 .eyebrow {
   color: var(--signal);
   font-weight: 700;
@@ -284,7 +284,7 @@ ul.facts li {
 /* Home: the message loop is in phone.js; the button sits under the caption */
 .phone .pause { margin-top: -0.25rem; }
 
-/* TypeTalk page: café scene (scene.js) */
+/* TihoFlip page: café scene (scene.js) */
 figure.scene {
   margin: 1.5rem 0 0;
   max-width: 26rem;
@@ -379,7 +379,7 @@ section > h2 + .faq-group { margin-top: 0; }
 .faq-steps { margin: 0 0 0.6rem; padding-left: 1.4rem; }
 .faq-steps li { margin: 0.25rem 0; }
 
-/* Gdje TypeTalk pomaže: situacije i savjeti */
+/* Gdje TihoFlip pomaže: situacije i savjeti */
 .situations { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0.75rem; margin: 1rem 0 0.5rem; }
 .situation { background: var(--slate); border: 1px solid var(--line); border-radius: 0.9rem; padding: 1rem; min-width: 0; }
 .situation svg { width: 2.2rem; height: 2.2rem; color: var(--signal); display: block; margin-bottom: 0.5rem; }
