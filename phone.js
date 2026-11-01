@@ -1,4 +1,4 @@
-// Home: TypeTalk on an upright phone. Messages are typed in the field, appear on the display,
+// Home: TihoFlip on an upright phone. Messages are typed in the field, appear on the display,
 // then turn to face the person across; one after another, only while the phone is on screen.
 // Without JS, or with reduced motion, the first message stays turned, as in the HTML.
 (() => {
