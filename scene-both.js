@@ -1,4 +1,4 @@
-// TihoFlip page: counter scene (split screen, conversation both ways).
+// TipkoFlip page: counter scene (split screen, conversation both ways).
 // Without JS, or with reduced motion, the final picture stays as it is in the HTML.
 (() => {
   const fig = document.getElementById("scene-both");

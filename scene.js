@@ -1,4 +1,4 @@
-// TihoFlip page: café scene. Without JS, or with reduced motion, the final picture stays as it is in the HTML.
+// TipkoFlip page: café scene. Without JS, or with reduced motion, the final picture stays as it is in the HTML.
 (() => {
   const scene = document.getElementById("scene");
   if (!scene || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
