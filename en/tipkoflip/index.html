@@ -238,7 +238,7 @@
         "name": "Do I need internet or an account?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. TipkoFlip works offline, without signing in, and asks for no permissions."
+          "text": "No. TipkoFlip works offline and without signing in. The only permission is the microphone for Two-way conversation, and only when you first open it."
         }
       },
       {
@@ -251,10 +251,10 @@
       },
       {
         "@type": "Question",
-        "name": "What is Google backup, and do I need it?",
+        "name": "Does TipkoFlip back up my phrases?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If you turn it on, Android saves your phrases and settings to your Google Account once a day, so they come back on a new phone by themselves. It's off by default. Turn it on in Settings → Moving to a new phone. More in the Google backup section."
+          "text": "If Google backup is turned on on your phone, Android also backs up TipkoFlip's phrases, categories and settings, so they come back by themselves on a new phone when you sign in with the same Google Account. The backup is encrypted with your screen lock, so Google can't read it. TipkoFlip itself sends nothing over the internet. If you don't want a backup, turn it off in your phone's settings: open Settings, look for Backup (the search bar at the top of Settings is easiest; depending on the phone it's under Google, System or Accounts and backup) and turn off Backup by Google One (or Back up to Google Drive). This turns off backup for the whole phone. You can then move your phrases straight from the old phone when setting up the new one, or with Send all phrases to yourself."
         }
       },
       {
@@ -548,9 +548,9 @@
         </div>
         <h3 class="faq-group">Privacy and your data</h3>
         <div class="faq">
-          <details><summary>Do I need internet or an account?</summary><div class="faq-a"><p>No. TipkoFlip works offline, without signing in, and asks for no permissions.</p></div></details>
+          <details><summary>Do I need internet or an account?</summary><div class="faq-a"><p>No. TipkoFlip works offline and without signing in. The only permission is the microphone for Two-way conversation, and only when you first open it.</p></div></details>
           <details><summary>What does TipkoFlip save, and does it send anything?</summary><div class="faq-a"><p>Your phrases, categories and settings are saved only on your phone. Optionally also your last message, which you can turn off in Settings. TipkoFlip sends nothing over the internet and has no analytics.</p><p>More in the <a href="/en/tipkoflip/privacy.html">privacy policy</a>.</p></div></details>
-          <details><summary>What is Google backup, and do I need it?</summary><div class="faq-a"><p>If you turn it on, Android saves your phrases and settings to your Google Account once a day, so they come back on a new phone by themselves. It's off by default. Turn it on in Settings → Moving to a new phone. More in the <a href="#backup">Google backup</a> section.</p></div></details>
+          <details><summary>Does TipkoFlip back up my phrases?</summary><div class="faq-a"><p>If Google backup is turned on on your phone, Android also backs up TipkoFlip's phrases, categories and settings, so they come back by themselves on a new phone when you sign in with the same Google Account. The backup is encrypted with your screen lock (PIN, pattern or password), so Google can't read it. TipkoFlip itself sends nothing over the internet.</p><p><strong>If you don't want a backup</strong>, turn it off in your phone's settings:</p><ol class="faq-steps"><li>Open <strong>Settings</strong>.</li><li>Look for <strong>Backup</strong> (the search bar at the top of Settings is easiest). Depending on the phone it's under <strong>Google</strong>, <strong>System</strong> or <strong>Accounts and backup</strong>.</li><li>Turn off <strong>Backup by Google One</strong> (or <strong>Back up to Google Drive</strong>).</li></ol><p>This turns off backup for the whole phone, not just TipkoFlip. You can then move your phrases straight from the old phone when setting up the new one (by cable or Wi-Fi), or with <strong>Send all phrases to yourself</strong>. More in the <a href="#backup">Google backup</a> section.</p></div></details>
           <details><summary>How do I move my phrases to a new phone?</summary><div class="faq-a"><p><strong>On your old phone</strong></p><ol class="faq-steps"><li>Open Settings → Moving to a new phone and tap <strong>Send all phrases to yourself</strong>.</li><li>A list of apps opens. Choose your e-mail app and send the message to your own address.</li></ol><p><strong>On your new phone</strong></p><ol class="faq-steps" start=3><li>Install TipkoFlip.</li><li>Open that message. Long-press any word in it, then tap <strong>Select all</strong>.</li><li>In the menu above the text, tap <strong>TipkoFlip</strong>. If you don't see it, tap ⋮ or <strong>Share</strong> and choose TipkoFlip from the list of apps.</li><li>TipkoFlip opens with your phrases. Tap <strong>Add to phrases</strong>, then <strong>Add</strong>.</li></ol><p>The phrases go back into their categories. Any you already have are skipped, so nothing is doubled.</p></div></details>
           <details><summary>Do I lose my phrases when I update the app?</summary><div class="faq-a"><p>No. Updating keeps all your phrases, categories and settings.</p></div></details>
           <details><summary>How do I delete all my data?</summary><div class="faq-a"><p>Uninstall TipkoFlip, or in your Android settings open Apps → TipkoFlip → Storage and tap Clear data. The names differ slightly between phone makers. If Google backup was on, Android removes the copy in your Google Account by itself over time.</p></div></details>
@@ -559,11 +559,11 @@
 
       <section aria-labelledby="privacy">
         <h2 id="privacy">Privacy</h2>
-        <p class="summary">TipkoFlip doesn't collect your personal data, doesn't send it to us and doesn't share it with anyone. No account, no analytics, no ads. Your phrases and settings stay on your phone, unless you turn on Google backup yourself.</p>
+        <p class="summary">TipkoFlip doesn't collect your personal data, doesn't send it to us and doesn't share it with anyone. No account, no analytics, no ads. Your phrases and settings stay on your phone, unless Google backup is turned on on your phone.</p>
         <h3 class="how-title" id="backup">Google backup</h3>
         <p>Android can save apps' data to your Google Account, so it comes back by itself when you move to a new phone. This is an Android service, not part of TipkoFlip: TipkoFlip has no internet access and sends nothing itself.</p>
-        <p><strong>Since version 1.6, backup is off by default for TipkoFlip.</strong> The app asks you once whether you want to turn it on, and you can change your choice at any time in Settings → Moving to a new phone.</p>
-        <p><strong>On:</strong> your phrases, categories and settings come back by themselves on a new phone when you sign in with the same Google Account. Google stores and keeps the backup, and we have no access to it.</p>
+        <p><strong>Since version 1.8, TipkoFlip follows your phone's setting</strong>, like most apps: when Google backup is on on your phone, TipkoFlip's data is backed up too. Backup is turned on or off in your phone's settings (Settings → Backup), for the whole phone.</p>
+        <p><strong>On:</strong> your phrases, categories and settings come back by themselves on a new phone when you sign in with the same Google Account. Google stores and keeps the backup, encrypted with your screen lock, and we have no access to it.</p>
         <p><strong>Off:</strong> everything stays only on this phone. If the phone breaks or is lost, the phrases can't be recovered. So before you change phones, tap “Send all phrases to yourself” in Settings and choose e-mail or a notes app. A direct transfer from one phone to another, by cable or Wi-Fi when you set up the new phone, works even with backup off, because it doesn't go through Google.</p>
         <p><a href="/en/tipkoflip/privacy.html">Full TipkoFlip privacy policy</a></p>
       </section>
