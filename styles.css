@@ -391,3 +391,19 @@ ul.tips { list-style: none; padding: 0; margin: 0.5rem 0 0; max-width: var(--mea
 ul.tips li { position: relative; padding-left: 1.8rem; margin: 0.55rem 0; }
 ul.tips li::before { content: "✓"; position: absolute; left: 0.2rem; top: 0; color: var(--signal); font-weight: 800; }
 ul.tips b { color: var(--paper); }
+
+/* Novosti e-mailom (Brevo, obični obrazac bez skripti i kolačića) */
+.newsletter-form { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: var(--measure); margin: 1rem 0 0.75rem; }
+.newsletter-form input[type="email"] {
+  flex: 1 1 16rem; min-width: 0; font: inherit; color: var(--paper);
+  background: var(--slate); border: 1px solid var(--line); border-radius: 0.6rem; padding: 0.65rem 0.9rem;
+}
+.newsletter-form input[type="email"]::placeholder { color: var(--muted); }
+.newsletter-form input[type="email"]:focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; }
+.newsletter-form button {
+  font: inherit; font-weight: 700; color: var(--graphite); background: var(--signal);
+  border: 0; border-radius: 0.6rem; padding: 0.65rem 1.2rem; cursor: pointer;
+}
+.newsletter-form button:hover { background: var(--paper); }
+.nl-note { color: var(--muted); font-size: 0.95rem; max-width: var(--measure); margin: 0; }
+.sr-only, .hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
