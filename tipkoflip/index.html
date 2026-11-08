@@ -619,24 +619,39 @@
         <p>Pitanja, prijedlozi ili prijava greške: <a href="mailto:shoxilabs.dev@gmail.com">shoxilabs.dev@gmail.com</a></p>
       </section>
     </main>
-    <aside class="nl-aside" aria-labelledby="novosti-strana">
-      <h2 id="novosti-strana">Novosti e-mailom</h2>
-      <p>Nove verzije i druge važne novosti o TipkoFlipu.</p>
-      <form class="newsletter-form" method="POST" action="https://acce96a0.sibforms.com/serve/MUIFANexXIxPDDhS1WCBh1Y9vdEx1tsCdH6-oe6SYtXH0XnzoQb96cdJpBzRT7kx26KYiifVJuT_g9YiYtAnMEtd1t7vXL6AQ0u74v3ZIZ3t-jRVsT0fXKK0Y4Foq6NgiTVDQkfxEVg2ZJZpZV418aqvWqZ7oxbgklHyH7ud4jIM2Ee_lVGDfGf0eNLqrD8Jw2Tkv5euhdnlXV0Bqw==">
-        <label class="sr-only" for="nl-email-side">E-mail adresa</label>
-        <input id="nl-email-side" type="email" name="EMAIL" required autocomplete="email" placeholder="vasa@adresa.hr">
-        <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="locale" value="en">
-        <input type="hidden" name="html_type" value="simple">
-        <button type="submit">Prijavi se</button>
-      </form>
-      <p class="nl-note">Bez praćenja, odjava u svakom e-mailu. <a href="/tipkoflip/privatnost.html#novosti">Privatnost</a></p>
-    </aside>
+    <div class="side">
+      <nav class="toc" aria-label="Na ovoj stranici">
+        <p class="toc-title">Na ovoj stranici</p>
+        <ul>
+          <li><a href="#gdje-pomaze">Gdje pomaže</a></li>
+          <li><a href="#funkcije">Što može</a></li>
+          <li><a href="#oba-smjera">Razgovor u oba smjera</a></li>
+          <li><a href="#dolazi">Što dolazi</a></li>
+          <li><a href="#cesta-pitanja">Česta pitanja</a></li>
+          <li><a href="#privatnost">Privatnost</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <aside class="nl-aside" aria-labelledby="novosti-strana">
+        <h2 id="novosti-strana">Novosti e-mailom</h2>
+        <p>Nove verzije i druge važne novosti o TipkoFlipu.</p>
+        <form class="newsletter-form" method="POST" action="https://acce96a0.sibforms.com/serve/MUIFANexXIxPDDhS1WCBh1Y9vdEx1tsCdH6-oe6SYtXH0XnzoQb96cdJpBzRT7kx26KYiifVJuT_g9YiYtAnMEtd1t7vXL6AQ0u74v3ZIZ3t-jRVsT0fXKK0Y4Foq6NgiTVDQkfxEVg2ZJZpZV418aqvWqZ7oxbgklHyH7ud4jIM2Ee_lVGDfGf0eNLqrD8Jw2Tkv5euhdnlXV0Bqw==">
+          <label class="sr-only" for="nl-email-side">E-mail adresa</label>
+          <input id="nl-email-side" type="email" name="EMAIL" required autocomplete="email" placeholder="vasa@adresa.hr">
+          <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="en">
+          <input type="hidden" name="html_type" value="simple">
+          <button type="submit">Prijavi se</button>
+        </form>
+        <p class="nl-note">Bez praćenja, odjava u svakom e-mailu. <a href="/tipkoflip/privatnost.html#novosti">Privatnost</a></p>
+      </aside>
+    </div>
   </div>
 
   <footer class="site-footer">
     <div class="wrap">© 2026 Shoxi Labs · Posjete se broje bez kolačića (Cloudflare Web Analytics)</div>
   </footer>
+  <script src="/toc.js" defer></script>
   <script src="/scene.js" defer></script>
   <script src="/scene-both.js" defer></script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "94a921f4c98a4f0ab8cf91ca3a76f69c"}'></script><!-- End Cloudflare Web Analytics -->
