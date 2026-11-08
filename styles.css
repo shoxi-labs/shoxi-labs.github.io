@@ -450,4 +450,7 @@ ul.tips b { color: var(--paper); }
   .nl-aside .newsletter-form { flex-direction: column; margin: 0.8rem 0 0.6rem; }
   .nl-aside .newsletter-form input[type="email"] { flex: none; width: 100%; background: var(--graphite); }
   .nl-aside .nl-note { font-size: 0.85rem; }
+  .support-link { margin: 0.9rem 0 0; font-size: 0.95rem; }
+  .support-link a { color: var(--muted); }
+  .support-link a:hover { color: var(--paper); }
 }
