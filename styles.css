@@ -450,7 +450,11 @@ ul.tips b { color: var(--paper); }
   .nl-aside .newsletter-form { flex-direction: column; margin: 0.8rem 0 0.6rem; }
   .nl-aside .newsletter-form input[type="email"] { flex: none; width: 100%; background: var(--graphite); }
   .nl-aside .nl-note { font-size: 0.85rem; }
-  .support-link { margin: 0.9rem 0 0; font-size: 0.95rem; }
-  .support-link a { color: var(--muted); }
-  .support-link a:hover { color: var(--paper); }
+  .support-link { margin: 0.9rem 0 0; }
+  .support-link a {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    padding: 0.65rem 0.9rem; border: 1px solid var(--line); border-radius: 0.9rem;
+    color: var(--paper); font-weight: 700; font-size: 0.98rem; text-decoration: none; background: transparent;
+  }
+  .support-link a:hover { border-color: var(--signal); color: var(--signal); }
 }
