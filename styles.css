@@ -411,7 +411,7 @@ ul.tips b { color: var(--paper); }
 /* Poveznica Novosti u zaglavlju i bočna kartica (samo široki ekrani) */
 .header-right { display: flex; align-items: center; gap: 1rem; }
 .nl-link { color: var(--signal); font-weight: 700; font-size: 0.95rem; }
-.nl-aside { display: none; }
+.side { display: none; }
 @media (min-width: 1100px) {
   .wrap.has-aside {
     max-width: calc(var(--measure) + 17rem + 3rem + 2 * var(--gutter));
@@ -421,11 +421,25 @@ ul.tips b { color: var(--paper); }
     align-items: start;
   }
   .wrap.has-aside > .site-header { grid-column: 1 / -1; }
-  .nl-aside {
+  .side {
     display: block;
     position: sticky;
     top: 1.5rem;
     margin-top: 2.5rem;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+  }
+  .toc { margin: 0 0 1.25rem; }
+  .toc-title { color: var(--muted); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem; }
+  .toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+  .toc a {
+    display: block; padding: 0.3rem 0 0.3rem 0.9rem; margin-left: -2px;
+    border-left: 2px solid transparent; color: var(--fog); text-decoration: none; font-size: 0.98rem; line-height: 1.35;
+  }
+  .toc a:hover { color: var(--paper); }
+  .toc a[aria-current="true"] { color: var(--signal); border-left-color: var(--signal); font-weight: 700; }
+  .nl-aside {
+    display: block;
     background: var(--slate);
     border: 1px solid var(--line);
     border-radius: 0.9rem;
@@ -436,4 +450,7 @@ ul.tips b { color: var(--paper); }
   .nl-aside .newsletter-form { flex-direction: column; margin: 0.8rem 0 0.6rem; }
   .nl-aside .newsletter-form input[type="email"] { flex: none; width: 100%; background: var(--graphite); }
   .nl-aside .nl-note { font-size: 0.85rem; }
+  .support-link { margin: 0.9rem 0 0; font-size: 0.95rem; }
+  .support-link a { color: var(--muted); }
+  .support-link a:hover { color: var(--paper); }
 }
