@@ -310,12 +310,15 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap has-aside">
     <header class="site-header">
       <a class="brand" href="/en/"><img class="brand-mark" src="/fox.png" alt="" width="34" height="34"> Shoxi Labs</a>
-      <nav class="lang" aria-label="Language">
+      <div class="header-right">
+        <a class="nl-link" href="#newsletter">News</a>
+        <nav class="lang" aria-label="Language">
         <a href="/tipkoflip/" lang="hr">HR</a> / <a href="/en/tipkoflip/" aria-current="true">EN</a>
       </nav>
+      </div>
     </header>
 
     <main>
@@ -616,6 +619,19 @@
         <p>Questions, suggestions or bug reports: <a href="mailto:shoxilabs.dev@gmail.com">shoxilabs.dev@gmail.com</a></p>
       </section>
     </main>
+    <aside class="nl-aside" aria-labelledby="newsletter-side">
+      <h2 id="newsletter-side">News by email</h2>
+      <p>A short note when a new version of TipkoFlip comes out.</p>
+      <form class="newsletter-form" method="POST" action="https://acce96a0.sibforms.com/serve/MUIFANexXIxPDDhS1WCBh1Y9vdEx1tsCdH6-oe6SYtXH0XnzoQb96cdJpBzRT7kx26KYiifVJuT_g9YiYtAnMEtd1t7vXL6AQ0u74v3ZIZ3t-jRVsT0fXKK0Y4Foq6NgiTVDQkfxEVg2ZJZpZV418aqvWqZ7oxbgklHyH7ud4jIM2Ee_lVGDfGf0eNLqrD8Jw2Tkv5euhdnlXV0Bqw==">
+        <label class="sr-only" for="nl-email-side">Email address</label>
+        <input id="nl-email-side" type="email" name="EMAIL" required autocomplete="email" placeholder="you@example.com">
+        <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="nl-note">No tracking, unsubscribe in every email. <a href="/en/tipkoflip/privacy.html#newsletter">Privacy</a></p>
+    </aside>
   </div>
 
   <footer class="site-footer">
