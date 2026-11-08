@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TipkoFlip – aplikacija za razgovor s gluhim i nagluhim osobama · Shoxi Labs</title>
+  <title>TipkoFlip – razgovor kad ne čujete ili ne možete govoriti · Shoxi Labs</title>
   <meta name="description" content="Android aplikacija: napišite poruku i pokažite je sugovorniku velikim slovima, licem u lice. Bez računa, bez interneta, bez oglasa.">
   <link rel="canonical" href="https://shoxi-labs.github.io/tipkoflip/">
   <meta property="og:type" content="website">
@@ -65,6 +65,14 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je li TipkoFlip samo za one koji ne čuju?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ne. TipkoFlip pomaže i kad čujete, a ne možete ili teško govorite: napišete odgovor, a sugovornik ga pročita velikim slovima ili ga TipkoFlip izgovori naglas. Pri prvom pokretanju odaberete što vam najčešće treba (Ne čujem, Ne mogu govoriti, Teško govorim ili Ne čujem i ne govorim), pa prema tome dobijete prvu poruku i početne fraze. Izbor mijenjate u Postavkama → Moja prva poruka."
+        }
+      },
       {
         "@type": "Question",
         "name": "Ima li TipkoFlip oglasa?",
@@ -211,6 +219,14 @@
       },
       {
         "@type": "Question",
+        "name": "Zašto je druga aplikacija gore (ili dolje), a ne obrnuto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na koju polovicu ekrana ide aplikacija koju TipkoFlip otvori pokraj sebe, odlučuje mobitel, a ne TipkoFlip. Zato je na nekim mobitelima gore, a na drugima dolje. Oba rasporeda rade. Kad je TipkoFlip gore, njegov prikaz je bliže osobi preko puta, a tekst sugovornika bliže vama. Ako vam više odgovara obrnuto, zamijenite polovice (vidi sljedeće pitanje)."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Kako zamijeniti polovice ekrana ili promijeniti njihovu veličinu?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -230,7 +246,7 @@
         "name": "Može li TipkoFlip pretvoriti govor sugovornika u tekst?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sada to može aplikacija za prepoznavanje govora na podijeljenom zaslonu s TipkoFlipom. Upute su na ovoj stranici, u odjeljku Razgovor u oba smjera. U verziji 1.8 TipkoFlip to dobiva i sam, po želji i bez interneta. To je dodatak i nije točan kao plaćene usluge."
+          "text": "Sada to može aplikacija za prepoznavanje govora na podijeljenom zaslonu s TipkoFlipom. Upute su na ovoj stranici, u odjeljku Razgovor u oba smjera. Od verzije 1.7.9 TipkoFlip to može i sam, u Razgovoru u oba smjera (po želji, uz dozvolu za mikrofon; koristi prepoznavanje govora mobitela, koje može ići preko interneta). U verziji 1.8 dolazi i način bez interneta. Prepoznavanje nije točno kao kod plaćenih usluga."
         }
       },
       {
@@ -238,7 +254,7 @@
         "name": "Treba li mi internet ili račun?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ne. TipkoFlip radi bez interneta i bez prijave, i ne traži nikakve dozvole."
+          "text": "Ne. TipkoFlip radi bez interneta i bez prijave. Jedina dozvola je mikrofon za Razgovor u oba smjera, i to tek kad ga prvi put otvorite."
         }
       },
       {
@@ -251,10 +267,10 @@
       },
       {
         "@type": "Question",
-        "name": "Što je Googleova sigurnosna kopija i trebam li je?",
+        "name": "Sprema li TipkoFlip moje fraze u sigurnosnu kopiju?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ako je uključite, Android jednom dnevno spremi vaše fraze i postavke u vaš Google račun, pa se same vrate na novom mobitelu. Zadano je isključena. Uključujete je u Postavkama → Prijenos na novi mobitel. Više u odjeljku Googleova sigurnosna kopija."
+          "text": "Ako je na vašem mobitelu uključena Googleova sigurnosna kopija, Android u nju sprema i fraze, kategorije i postavke TipkoFlipa, pa se na novom mobitelu vrate same kad se prijavite istim Google računom. Kopija je šifrirana zaključavanjem zaslona, pa je Google ne može čitati. TipkoFlip sam ništa ne šalje na internet. Ako ne želite kopiju, isključite je u postavkama mobitela: otvorite Postavke, potražite Sigurnosna kopija (najlakše tražilicom na vrhu Postavki; ovisno o mobitelu je pod Google, Sustav ili Računi i sigurnosna kopija) i isključite Sigurnosna kopija Google One (ili Sigurnosno kopiranje na Google disk). To isključuje kopiju za cijeli mobitel. Fraze tada prenesete izravno sa starog mobitela pri postavljanju novog ili tipkom Pošalji sve fraze sebi."
         }
       },
       {
@@ -298,7 +314,7 @@
       <div class="hero">
         <p class="eyebrow">Shoxi Labs · Android</p>
         <h1>TipkoFlip</h1>
-        <p class="lede">Napišite poruku i pokažite je sugovorniku velikim slovima, licem u lice. Za gluhe i nagluhe osobe – i za svakoga kome je u nekom trenutku lakše pisati nego govoriti ili slušati, na primjer u buci.</p>
+        <p class="lede">Napišite poruku i pokažite je sugovorniku velikim slovima, licem u lice. Kad ne čujete ili slabo čujete, kad ne možete govoriti ili vam je glas slab – i za svakoga kome je u nekom trenutku lakše pisati, na primjer u buci.</p>
         <ul class="facts">
           <li>Bez oglasa</li>
           <li>Bez računa</li>
@@ -367,6 +383,8 @@
           <div class="situation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3 21h18M14.5 12.5v.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><h3>Susjed koji ne shvaća da ne čujete</h3><p>Poruka velikim slovima, koju pročita i bez naočala, kaže više od dugog objašnjavanja. Konačno zna da treba govoriti polako, okrenut prema vama.</p></div>
           <div class="situation"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M14.5 10h4M14.5 13.5h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><h3>Imena, prezimena i nazivi</h3><p>Imena se s usana najteže čitaju. Pružite mobitel sugovorniku da ih napiše, a gumb Zamjena uloga okrene ekran prema njemu.</p></div>
           <div class="situation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><h3>Restoran u polumraku</h3><p>Kad je svjetla malo i teško je čitati s usana, sugovornik napiše ono što ste propustili.</p></div>
+          <div class="situation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z M9 9h6M9 12h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Kad ne možete govoriti</h3><p>Čujete sugovornika, ali ne možete odgovoriti glasom. Napišete odgovor, a TipkoFlip ga pokaže velikim slovima ili izgovori naglas.</p></div>
+          <div class="situation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l4 4V6L7 10zM15 10.5a2 2 0 0 1 0 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Kad je glas slab ili umoran</h3><p>Fraze na jedan dodir za ono što često kažete, pa ne morate sve pisati iznova ni naprezati glas.</p></div>
         </div>
         <h3 class="how-title" id="savjeti">Savjeti</h3>
         <ul class="tips">
@@ -508,7 +526,7 @@
       <section aria-labelledby="dolazi">
         <h2 id="dolazi">Što dolazi</h2>
         <ol class="roadmap">
-          <li class="next"><span class="rm-tag">Sljedeće · 1.8</span><strong>Razgovor u oba smjera</strong><span>Dok vi pišete, ono što sugovornik govori prikazuje se kao tekst na dijelu ekrana okrenutom prema vama. Radi bez interneta, na samom mobitelu – dodatak za kad nemate internet, ali prepoznavanje nije točno kao kod vrhunskih plaćenih usluga. Po želji, uz dozvolu za mikrofon; zvuk i tekst se ne spremaju. Uz to nove upute s kratkim animacijama bez teksta i primjerima iz svakodnevnih situacija.</span></li>
+          <li class="next"><span class="rm-tag">Sljedeće · 1.8</span><strong>Razgovor u oba smjera bez interneta</strong><span>Od 1.7.9 Razgovor u oba smjera radi s prepoznavanjem govora mobitela; u 1.8 dolazi i način bez interneta, na samom mobitelu – prepoznavanje nije točno kao kod vrhunskih plaćenih usluga. Uz to nove upute s kratkim animacijama bez teksta i primjerima iz svakodnevnih situacija.</span></li>
           <li class="goal"><span class="rm-tag">Cilj</span><strong>Javna objava na Google Playu</strong><span>Novi video s titlovima (upute i kratki prikaz) i nove slike aplikacije na Google Playu.</span></li>
         </ol>
         <p class="rm-note">Plan se mijenja prema prijedlozima korisnika.</p>
@@ -518,6 +536,7 @@
         <h2 id="cesta-pitanja">Česta pitanja</h2>
         <h3 class="faq-group">Općenito</h3>
         <div class="faq">
+          <details><summary>Je li TipkoFlip samo za one koji ne čuju?</summary><div class="faq-a"><p>Ne. TipkoFlip pomaže i kad čujete, a ne možete ili teško govorite: napišete odgovor, a sugovornik ga pročita velikim slovima ili ga TipkoFlip izgovori naglas. Pri prvom pokretanju odaberete što vam najčešće treba (Ne čujem, Ne mogu govoriti, Teško govorim ili Ne čujem i ne govorim), pa prema tome dobijete prvu poruku i početne fraze. Izbor mijenjate u Postavkama → Moja prva poruka.</p></div></details>
           <details><summary>Ima li TipkoFlip oglasa?</summary><div class="faq-a"><p>Ne, TipkoFlip nema oglasa i ne traži račun ni prijavu.</p></div></details>
           <details><summary>Gdje mogu preuzeti TipkoFlip?</summary><div class="faq-a"><p>TipkoFlip je sada u zatvorenom testiranju na Google Playu. Javna objava planirana je nakon verzije 1.8.</p></div></details>
           <details><summary>Postoji li verzija za iPhone?</summary><div class="faq-a"><p>Za sada ne, TipkoFlip je samo za Android. Ako biste koristili iPhone verziju, javite nam. Tako vidimo koliko je interesa.</p></div></details>
@@ -542,15 +561,16 @@
           <details><summary>Zašto izgovor ne radi ili zvuči čudno?</summary><div class="faq-a"><p>TipkoFlip koristi glas za izgovor koji je instaliran na mobitelu. U postavkama Androida potražite „tekst u govor” i preuzmite glas za svoj jezik.</p></div></details>
           <details><summary>Kako otvoriti TipkoFlip na podijeljenom zaslonu?</summary><div class="faq-a"><p>Gumb Podijeljeni zaslon u traci TipkoFlipa otvori aplikaciju za prepoznavanje govora pokraj TipkoFlipa. Prvi put je odaberete, a promijeniti je možete u Postavkama → Podijeljeni zaslon.</p><p>Od verzije 1.7 TipkoFlip u podijeljenom zaslonu ima svoju nižu tipkovnicu, pa gornja aplikacija ostane iste veličine i njezini titlovi se vide dok pišete.</p><p>Ne radi na svim mobitelima, osobito na starijim modelima. Tada podijeljeni zaslon možete uključiti sami, prema uputama u odjeljku <a href="#oba-smjera">Razgovor u oba smjera</a>.</p></div></details>
           <details><summary>Podijeljeni zaslon se ne otvara. Što mogu?</summary><div class="faq-a"><p>Otvaranje jedne aplikacije pokraj druge ne radi na svim mobitelima, osobito na starijim modelima. Tada ga uključite sami: otvorite aplikaciju za prepoznavanje govora, pa popis nedavnih aplikacija, dodirnite ikonu te aplikacije i odaberite podijeljeni zaslon, pa TipkoFlip. Točni koraci su u odjeljku <a href="#oba-smjera">Razgovor u oba smjera</a>.</p><p>Ako mobitel javi da aplikacija ne podržava podijeljeni zaslon, odaberite drugu aplikaciju ili u postavkama mobitela potražite opciju poput „Više prozora za sve aplikacije” (nemaju je svi mobiteli).</p></div></details>
+          <details><summary>Zašto je druga aplikacija gore (ili dolje), a ne obrnuto?</summary><div class="faq-a"><p>Na koju polovicu ekrana ide aplikacija koju TipkoFlip otvori pokraj sebe, odlučuje mobitel, a ne TipkoFlip. Zato je na nekim mobitelima gore, a na drugima dolje.</p><p>Oba rasporeda rade. Kad je TipkoFlip gore, njegov prikaz je bliže osobi preko puta, a tekst sugovornika bliže vama. Ako vam više odgovara obrnuto, zamijenite polovice (vidi sljedeće pitanje).</p></div></details>
           <details><summary>Kako zamijeniti polovice ekrana ili promijeniti njihovu veličinu?</summary><div class="faq-a"><p>Povucite crtu između aplikacija gore ili dolje da promijenite veličinu polovica. Dodirnite točkice na crti da zamijenite polovice; na nekim mobitelima za to dvaput dodirnete crtu.</p><p>Za izlaz iz podijeljenog zaslona povucite crtu do ruba ekrana.</p></div></details>
           <details><summary>Mogu li u podijeljenom zaslonu pisati tipkovnicom mobitela?</summary><div class="faq-a"><p>Da. TipkoFlip u podijeljenom zaslonu ima svoju nižu tipkovnicu, da aplikacija pokraj ostane iste veličine. Tipkovnicu mobitela (s prijedlozima riječi i diktiranjem) uključite u Postavkama → Podijeljeni zaslon, ali tada se aplikacija pokraj smanji dok pišete.</p></div></details>
-          <details><summary>Može li TipkoFlip pretvoriti govor sugovornika u tekst?</summary><div class="faq-a"><p>Sada to može aplikacija za prepoznavanje govora na podijeljenom zaslonu s TipkoFlipom. Upute su na ovoj stranici, u odjeljku <a href="#oba-smjera">Razgovor u oba smjera</a>.</p><p>U verziji 1.8 TipkoFlip to dobiva i sam, po želji i bez interneta. To je dodatak i nije točan kao plaćene usluge.</p></div></details>
+          <details><summary>Može li TipkoFlip pretvoriti govor sugovornika u tekst?</summary><div class="faq-a"><p>Sada to može aplikacija za prepoznavanje govora na podijeljenom zaslonu s TipkoFlipom. Upute su na ovoj stranici, u odjeljku <a href="#oba-smjera">Razgovor u oba smjera</a>.</p><p>Od verzije 1.7.9 TipkoFlip to može i sam, u Razgovoru u oba smjera (po želji, uz dozvolu za mikrofon; koristi prepoznavanje govora mobitela, koje može ići preko interneta). U verziji 1.8 dolazi i način bez interneta. Prepoznavanje nije točno kao kod plaćenih usluga.</p></div></details>
         </div>
         <h3 class="faq-group">Privatnost i podaci</h3>
         <div class="faq">
-          <details><summary>Treba li mi internet ili račun?</summary><div class="faq-a"><p>Ne. TipkoFlip radi bez interneta i bez prijave, i ne traži nikakve dozvole.</p></div></details>
+          <details><summary>Treba li mi internet ili račun?</summary><div class="faq-a"><p>Ne. TipkoFlip radi bez interneta i bez prijave. Jedina dozvola je mikrofon za Razgovor u oba smjera, i to tek kad ga prvi put otvorite.</p></div></details>
           <details><summary>Što TipkoFlip sprema i šalje li išta?</summary><div class="faq-a"><p>Vaše fraze, kategorije i postavke spremaju se samo na vašem mobitelu. Po želji i zadnja poruka, to se može isključiti u Postavkama. TipkoFlip ništa ne šalje na internet i nema analitiku.</p><p>Više u <a href="/tipkoflip/privatnost.html">politici privatnosti</a>.</p></div></details>
-          <details><summary>Što je Googleova sigurnosna kopija i trebam li je?</summary><div class="faq-a"><p>Ako je uključite, Android jednom dnevno spremi vaše fraze i postavke u vaš Google račun, pa se same vrate na novom mobitelu. Zadano je isključena. Uključujete je u Postavkama → Prijenos na novi mobitel. Više u odjeljku <a href="#sigurnosna-kopija">Googleova sigurnosna kopija</a>.</p></div></details>
+          <details><summary>Sprema li TipkoFlip moje fraze u sigurnosnu kopiju?</summary><div class="faq-a"><p>Ako je na vašem mobitelu uključena Googleova sigurnosna kopija, Android u nju sprema i fraze, kategorije i postavke TipkoFlipa, pa se na novom mobitelu vrate same kad se prijavite istim Google računom. Kopija je šifrirana zaključavanjem zaslona (PIN, uzorak ili lozinka), pa je Google ne može čitati. TipkoFlip sam ništa ne šalje na internet.</p><p><strong>Ako ne želite kopiju</strong>, isključite je u postavkama mobitela:</p><ol class="faq-steps"><li>Otvorite <strong>Postavke</strong>.</li><li>Potražite <strong>Sigurnosna kopija</strong> (najlakše preko tražilice na vrhu Postavki). Ovisno o mobitelu nalazi se pod <strong>Google</strong>, <strong>Sustav</strong> ili <strong>Računi i sigurnosna kopija</strong>.</li><li>Isključite <strong>Sigurnosna kopija Google One</strong> (ili <strong>Sigurnosno kopiranje na Google disk</strong>).</li></ol><p>To isključuje kopiju za cijeli mobitel, ne samo za TipkoFlip. Fraze tada prenesete na novi mobitel izravno sa starog pri postavljanju (kabelom ili preko Wi-Fi mreže) ili tipkom <strong>Pošalji sve fraze sebi</strong>. Više u odjeljku <a href="#sigurnosna-kopija">Googleova sigurnosna kopija</a>.</p></div></details>
           <details><summary>Kako prenijeti fraze na novi mobitel?</summary><div class="faq-a"><p><strong>Na starom mobitelu</strong></p><ol class="faq-steps"><li>Otvorite Postavke → Prijenos na novi mobitel i dodirnite <strong>Pošalji sve fraze sebi</strong>.</li><li>Otvori se popis aplikacija. Odaberite svoju aplikaciju za e-poštu i pošaljite poruku na svoju adresu.</li></ol><p><strong>Na novom mobitelu</strong></p><ol class="faq-steps" start=3><li>Instalirajte TipkoFlip.</li><li>Otvorite tu poruku. Dugo pritisnite bilo koju riječ u njoj, pa dodirnite <strong>Označi sve</strong>.</li><li>U izborniku iznad teksta dodirnite <strong>TipkoFlip</strong>. Ako ga ne vidite, dodirnite ⋮ ili <strong>Dijeli</strong> i na popisu aplikacija odaberite TipkoFlip.</li><li>TipkoFlip se otvori s vašim frazama. Dodirnite <strong>Dodaj u fraze</strong>, pa <strong>Dodaj</strong>.</li></ol><p>Fraze se vrate u svoje kategorije. One koje već imate preskaču se, pa se ništa ne udvostruči.</p></div></details>
           <details><summary>Gubim li fraze kad ažuriram aplikaciju?</summary><div class="faq-a"><p>Ne. Ažuriranje zadržava sve vaše fraze, kategorije i postavke.</p></div></details>
           <details><summary>Kako obrisati sve svoje podatke?</summary><div class="faq-a"><p>Deinstalirajte TipkoFlip, ili u postavkama Androida otvorite Aplikacije → TipkoFlip → Pohrana i dodirnite Izbriši podatke. Nazivi se malo razlikuju po proizvođaču mobitela. Ako je Googleova sigurnosna kopija bila uključena, kopiju u Google računu Android s vremenom sam ukloni.</p></div></details>
@@ -559,11 +579,11 @@
 
       <section aria-labelledby="privatnost">
         <h2 id="privatnost">Privatnost</h2>
-        <p class="summary">TipkoFlip ne prikuplja vaše osobne podatke, ne šalje ih nama i ne dijeli ih s drugima. Nema računa, analitike ni oglasa. Fraze i postavke ostaju na vašem mobitelu, osim ako sami uključite Googleovu sigurnosnu kopiju.</p>
+        <p class="summary">TipkoFlip ne prikuplja vaše osobne podatke, ne šalje ih nama i ne dijeli ih s drugima. Nema računa, analitike ni oglasa. Fraze i postavke ostaju na vašem mobitelu, osim ako je na mobitelu uključena Googleova sigurnosna kopija.</p>
         <h3 class="how-title" id="sigurnosna-kopija">Googleova sigurnosna kopija</h3>
         <p>Android može spremiti podatke aplikacija u vaš Google račun, da se same vrate kad prijeđete na novi mobitel. To je usluga Androida, a ne TipkoFlipa: TipkoFlip nema pristup internetu i sam ništa ne šalje.</p>
-        <p><strong>Od verzije 1.6 kopija je za TipkoFlip zadano isključena.</strong> Aplikacija vas jednom pita želite li je uključiti, a odluku možete promijeniti bilo kad u Postavkama → Prijenos na novi mobitel.</p>
-        <p><strong>Uključeno:</strong> fraze, kategorije i postavke same se vrate na novom mobitelu kad se prijavite istim Google računom. Kopiju sprema i čuva Google, a mi joj nemamo pristup.</p>
+        <p><strong>Od verzije 1.7.9 TipkoFlip prati postavku vašeg mobitela</strong>, kao većina aplikacija: kad je na mobitelu uključena Googleova sigurnosna kopija, u nju se spremaju i podaci TipkoFlipa. Kopija se uključuje i isključuje u postavkama mobitela (Postavke → Sigurnosna kopija), za cijeli mobitel.</p>
+        <p><strong>Uključeno:</strong> fraze, kategorije i postavke same se vrate na novom mobitelu kad se prijavite istim Google računom. Kopiju sprema i čuva Google, šifriranu zaključavanjem zaslona, a mi joj nemamo pristup.</p>
         <p><strong>Isključeno:</strong> sve ostaje samo na ovom mobitelu. Ako se mobitel pokvari ili izgubi, fraze se ne mogu vratiti. Zato prije promjene mobitela u Postavkama dodirnite „Pošalji sve fraze sebi” i odaberite e-mail ili aplikaciju za bilješke. Izravni prijenos s jednog mobitela na drugi, kabelom ili Wi-Fijem pri postavljanju novog mobitela, radi i kad je kopija isključena, jer ne ide preko Googlea.</p>
         <p><a href="/tipkoflip/privatnost.html">Cijela politika privatnosti za TipkoFlip</a></p>
       </section>
