@@ -477,3 +477,5 @@ ul.tips b { color: var(--paper); }
   .social-aside p { margin: 0 0 0.7rem; font-size: 1rem; }
   .social-aside .social a { padding: 0.4rem 0.8rem; font-size: 0.92rem; }
 }
+
+.handle { color: var(--signal); }
