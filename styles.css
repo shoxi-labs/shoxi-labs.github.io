@@ -6,7 +6,7 @@
   --muted: #8B949E;
   --paper: #F0F6FC;
   --signal: #3FB950;
-  --measure: 42rem;
+  --measure: 46rem;
   --gutter: clamp(16px, 5vw, 48px);
 }
 
@@ -450,6 +450,14 @@ ul.tips b { color: var(--paper); }
   .nl-aside .newsletter-form { flex-direction: column; margin: 0.8rem 0 0.6rem; }
   .nl-aside .newsletter-form input[type="email"] { flex: none; width: 100%; background: var(--graphite); }
   .nl-aside .nl-note { font-size: 0.85rem; }
+  /* sažetije (vlasnikova želja): manji razmaci, polje i tipka niži */
+  .nl-aside { padding: 0.9rem 0.9rem 0.8rem; margin-top: 0.9rem; }
+  .nl-aside h2 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+  .nl-aside p { font-size: 0.92rem; line-height: 1.45; }
+  .nl-aside .newsletter-form { gap: 0.4rem; margin: 0.6rem 0 0.45rem; }
+  .nl-aside .newsletter-form input[type="email"],
+  .nl-aside .newsletter-form button { padding: 0.45rem 0.75rem; font-size: 0.95rem; }
+  .nl-aside .nl-note { font-size: 0.8rem; line-height: 1.4; }
   .support-link { margin: 0.9rem 0 0; }
   .support-link a {
     display: flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -470,11 +478,11 @@ ul.tips b { color: var(--paper); }
 .social-aside { display: none; }
 @media (min-width: 1100px) {
   .social-aside {
-    display: block; margin-top: 0.9rem;
-    background: var(--slate); border: 1px solid var(--line); border-radius: 0.9rem; padding: 1.1rem 1.1rem 1rem;
+    display: block;
+    background: var(--slate); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.9rem 0.9rem 0.8rem;
   }
-  .social-aside h2 { color: var(--paper); font-size: 1.15rem; margin: 0 0 0.4rem; }
-  .social-aside p { margin: 0 0 0.7rem; font-size: 1rem; }
+  .social-aside h2 { color: var(--paper); font-size: 1.05rem; margin: 0 0 0.25rem; }
+  .social-aside p { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.45; }
   .social-aside .social a { padding: 0.4rem 0.8rem; font-size: 0.92rem; }
 }
 
